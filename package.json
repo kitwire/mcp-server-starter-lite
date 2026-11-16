@@ -1,0 +1,40 @@
+{
+  "name": "mcp-server-starter-lite",
+  "version": "1.0.0",
+  "description": "A small TypeScript MCP server for stdio, with two example tools and tests. Built on the official MCP TypeScript SDK v2.",
+  "license": "MIT",
+  "author": "Bogdan Ionut Gheorghe (https://kitwire.dev)",
+  "homepage": "https://kitwire.dev",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "typescript",
+    "stdio",
+    "claude",
+    "cursor"
+  ],
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --import tsx --test test/*.test.ts",
+    "inspect": "npx @modelcontextprotocol/inspector node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.4.0",
+    "zod": "^4.2.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "^2.4.0",
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^6.0.0"
+  }
+}
